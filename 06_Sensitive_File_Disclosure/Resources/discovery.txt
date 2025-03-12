@@ -1,0 +1,16 @@
+Directories Discovered:
+images
+admin
+audio
+css
+includes
+js
+fonts
+errors
+whatever
+
+robots.txt
+http://10.18.125.219:8000/whatever/.htpass
+
+
+root:437394baff5aa33daa618be47b75cb49
