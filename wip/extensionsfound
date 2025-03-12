@@ -1,0 +1,10 @@
+FUZZ : index EXT : .php 
+FUZZ : robots EXT : .txt 
+FUZZ : index EXT : .php 
+EXT : .txt FUZZ : robots 
+FUZZ : index EXT : .php 
+FUZZ : robots EXT : .txt 
+EXT : .ico FUZZ : favicon 
+FUZZ : index EXT : .php 
+EXT : .txt FUZZ : robots 
+FUZZ : favicon EXT : .ico 

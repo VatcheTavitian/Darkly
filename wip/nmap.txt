@@ -1,0 +1,28 @@
+Starting Nmap 7.80 ( https://nmap.org ) at 2024-12-02 17:54 +04
+Nmap scan report for localhost (127.0.0.1)
+Host is up (0.00013s latency).
+Not shown: 65534 closed ports
+PORT     STATE SERVICE VERSION
+8000/tcp open  http    nginx 1.4.6 (Ubuntu)
+| http-robots.txt: 2 disallowed entries 
+|_/whatever /.hidden
+|_http-server-header: nginx/1.4.6 (Ubuntu)
+|_http-title: BornToSec - Web Section
+No exact OS matches for host (If you know what OS is running on it, see https://nmap.org/submit/ ).
+TCP/IP fingerprint:
+OS:SCAN(V=7.80%E=4%D=12/2%OT=8000%CT=1%CU=42474%PV=N%DS=0%DC=L%G=Y%TM=674DB
+OS:C46%P=x86_64-pc-linux-gnu)SEQ(SP=108%GCD=1%ISR=105%TI=Z%CI=Z%II=I%TS=A)O
+OS:PS(O1=MFFD7ST11NW1%O2=MFFD7ST11NW1%O3=MFFD7NNT11NW1%O4=MFFD7ST11NW1%O5=M
+OS:FFD7ST11NW1%O6=MFFD7ST11)WIN(W1=FFCB%W2=FFCB%W3=FFCB%W4=FFCB%W5=FFCB%W6=
+OS:FFCB)ECN(R=Y%DF=Y%T=40%W=FFD7%O=MFFD7NNSNW1%CC=Y%Q=)T1(R=Y%DF=Y%T=40%S=O
+OS:%A=S+%F=AS%RD=0%Q=)T2(R=N)T3(R=N)T4(R=Y%DF=Y%T=40%W=0%S=A%A=Z%F=R%O=%RD=
+OS:0%Q=)T5(R=Y%DF=Y%T=40%W=0%S=Z%A=S+%F=AR%O=%RD=0%Q=)T6(R=Y%DF=Y%T=40%W=0%
+OS:S=A%A=Z%F=R%O=%RD=0%Q=)T7(R=Y%DF=Y%T=40%W=0%S=Z%A=S+%F=AR%O=%RD=0%Q=)U1(
+OS:R=Y%DF=N%T=40%IPL=164%UN=0%RIPL=G%RID=G%RIPCK=G%RUCK=G%RUD=G)IE(R=Y%DFI=
+OS:N%T=40%CD=S)
+
+Network Distance: 0 hops
+Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
+
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 24.92 seconds
