@@ -1,51 +1,6 @@
-# import requests
-
-# url = "http://10.18.125.219:8000/"
-# error_message = "404: Not Found"
-# recurse = []
-
-
-# try:
-#     with open("directorylist.txt", 'r') as f:
-#         for line in f:
-#             # print(f"Trying {line}")
-#             path = url + (line.strip() if line.strip().endswith('/') else line.strip() + '/')
-#             # print(path)
-#             try:
-#                 req = requests.get(path)
-#                 if error_message not in req.text:
-#                     recurse.append(line.strip())
-#                     print(line.strip())
-#             except Exception as e:
-#                 print(str(e))
-#     f.close()
-# except:
-#     print("Error")
-
-# try:
-#     for each in recurse:
-#         with open("directorylist.txt", 'r') as f:
-#             for line in f:
-#                 # print(f"Trying {line}")
-#                 path = url + each + '/' + (line.strip() if line.strip().endswith('/') else line.strip() + '/')
-#                 # print(path)
-#                 try:
-#                     req = requests.get(path)
-#                     if error_message not in req.text:
-#                         recurse.append(line.strip())
-#                         print(line.strip())
-#                 except Exception as e:
-#                     print(str(e))
-#         f.close()
-# except:
-#     print("Error")
-
-# print("Scan Complete")
-
-
 import requests
 
-url = "http://10.18.125.219:8000/"
+url = "http://{IP}:{PORT}/"
 error_message = "404: Not Found"
 recurse = set() 
 

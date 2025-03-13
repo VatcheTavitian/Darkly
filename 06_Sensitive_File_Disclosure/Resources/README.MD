@@ -20,7 +20,7 @@ Navigating to  "http://{IP}:{PORT}/robots.txt" reveals sensitive file with crede
 
 6- Attempt to login "http://{IP}:{PORT}/index.php?page=signin" is unsuccessful. We need to see if we can locate another login page.
 
-7- Open bash and navigate to script directory. Launch script with `python3 directorycheckrecursive.py` to attempt to brute force enumerate other potential directories using directorylist.txt wordlist.
+7- Open bash and navigate to script directory. Launch script with `python3 directorycheckrecursive.py` to attempt to brute force enumerate other potential directories using directorylist.txt wordlist. 
 
 8- Enumerated directories reveals interesting location at '/admin/'. Navigate to "http://{IP}:{PORT}/admin/"
 
