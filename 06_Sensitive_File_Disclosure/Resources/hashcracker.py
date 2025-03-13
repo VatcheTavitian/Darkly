@@ -1,6 +1,6 @@
 import hashlib
 
-target="437394baff5aa33daa618be47b75cb49"
+target="437394baff5aa33daa618be47b75cb49" # This is the hash found in htpassword file
 
 # Note: Passwordlist.txt should contain passwords from rockyou.txt
 with open("passwordlist.txt", "r",errors='ignore') as f:

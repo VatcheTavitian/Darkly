@@ -47,7 +47,7 @@ import requests
 
 url = "http://10.18.125.219:8000/"
 error_message = "404: Not Found"
-recurse = set()  # Use a set to avoid duplicate entries
+recurse = set() 
 
 # First pass - initial directory scan
 try:
@@ -57,7 +57,7 @@ try:
             try:
                 req = requests.get(path)
                 if error_message not in req.text:
-                    if line.strip() not in recurse:  # Avoid duplicates
+                    if line.strip() not in recurse: 
                         recurse.add(line.strip())
                         print(f"Discovered: {line.strip()}")
             except requests.RequestException as e:
@@ -74,7 +74,7 @@ try:
                 try:
                     req = requests.get(path)
                     if error_message not in req.text:
-                        if line.strip() not in recurse:  # Avoid duplicates
+                        if line.strip() not in recurse:  
                             recurse.add(line.strip())
                             print(f"Discovered: {line.strip()}")
                 except requests.RequestException as e:
