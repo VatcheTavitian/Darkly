@@ -1,6 +1,5 @@
 # XSS in Media Object
 
-
 ## Issue
 
 The URL "http://{IP}:{PORT}/index.php?page=media&src=nsa" embeds content onto the page and passing through different value in 'src' parameter can \
@@ -9,7 +8,7 @@ render malicious content on page.
 
 ## Attack Vector
 
-1 - Examining the HTML Code at "http://{IP}:{PORT}/index.php?page=media&src=nsa" and changing the 'src' value reveals the value is reflected in html code. \
+1 - Examining the HTML Code at "http://{IP}:{PORT}/index.php?page=media&src=nsa" and changing the 'src' value to 'src=thisismyvalueinput' reveals the value is reflected in html code. \
 `<object data="thisismyvalueinput"></object>`
 
 2 - We try different payloads to try and break out of the tags but are unsuccessful. We find most payloads are filtered so we try data urls as per `https://developer.mozilla.org/en-US/docs/Web/URI/Reference/Schemes/data` 
@@ -24,7 +23,6 @@ render malicious content on page.
 ## PoC
 
 <img src="12_Screenshot.png" width="70%" height="70%" />
-
 
 
 ## Mitigation

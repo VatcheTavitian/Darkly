@@ -1,6 +1,5 @@
 # Open Redirect
 
-
 ## Issue
 
 The URL "http://{IP}:{PORT}/index.php?page=redirect&site=" allows for the value in 'site' parameter to be any url \
@@ -22,7 +21,6 @@ This creates the risk of phishing attacks with an attacker being able to redirec
 ## PoC
 
 <img src="11_Screenshot.png" width="70%" height="70%" />
-
 
 
 ## Mitigation

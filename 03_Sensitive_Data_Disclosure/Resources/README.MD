@@ -4,7 +4,7 @@
 
 The 'Recover Password' page at "http://{IP}:{PORT}/index.php?page=recover" contains a hidden input field \
 for the 'mail' input required to reset the password. The default value in the field reveals the email \
-for the webmaster of the website. This information can potentially be used to attempt to gain access or brute force \
+for the webmaster of the website. This information can potentially be used to attempt to gain access or brute-force \
 the website.
 
 
@@ -16,7 +16,7 @@ the website.
 
 3 - Search for `<input type="hidden" name="mail" value="webmaster@borntosec.com" maxlength="15">`
 
-4 - Change value field to any other email
+4 - Change the value field to any other email
 
 5 - Click Submit
 
@@ -30,5 +30,5 @@ the website.
 
 ## Mitigation
 
-1 - Remove default value from input element and make input element visible
+1 - Remove default value from input element and make the input element visible
 

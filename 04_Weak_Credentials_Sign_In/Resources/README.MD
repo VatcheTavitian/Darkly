@@ -5,7 +5,7 @@
 The 'SignIn' page at "http://{IP}:{PORT}/index.php?page=signin" does not restrict number \
 of login attempts and does not lock user account after numerous failed login attempts. \
 This allows for a brute force attack in an attempt to user reveal credentials. Furthermore \
-with weak password policies in place, likelyhood of brute forcing login is increased.
+with weak password policies in place, likelihood of brute forcing login is increased.
 
 
 ## Attack Vector
@@ -32,7 +32,7 @@ with weak password policies in place, likelyhood of brute forcing login is incre
 
 1 - Restrict login attempts from a particular IP with rate limiting
 
-2 - Lock user account after numerous unsuccessful login in attemps
+2 - Lock user account after numerous unsuccessful login in attempts
 
 3 - Implement CAPTCHA challenge
 

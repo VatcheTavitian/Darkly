@@ -3,15 +3,14 @@
 ## Issue
 
 Examining the website cookies reveals 'I_am_admin' cookie has a value appearing to be an md5 hash. 
-This hash value can be ammended ultimately setting the session user as admin.
-
+This hash value can be amended ultimately setting the session user as admin.
 
 
 ## Attack Vector
 
 1 - Confirm the cookie value by open Web Developer Tools and examining cookies set in storage.
 
-2 - The cookie is set as '68934a3e9455fa72420237eb05902327' which appears to be md5. We suspect it is hash of 'false' so we confirm with folowing script.
+2 - The cookie is set as '68934a3e9455fa72420237eb05902327' which appears to be md5. We suspect it is hash of 'false' so we confirm with following script.
 
 3 - Open bash and navigate to script directory. Launch script with `python3 md5encodeandcheck.py`
 
@@ -23,20 +22,20 @@ This hash value can be ammended ultimately setting the session user as admin.
 
 7 - Refresh page and flag is revealed
 
-*NOTE - You can use existing MD5 decryption tools such as MD5decrypt.net which will check hashes of words in a wordlist instead of \
+*NOTE - You can use existing MD5 decryption tools such as MD5decrypt.net which will check hashes of words in a word list instead of \
 the md5encodeandcheck.py script which only examines the word 'false'*
 
 
 ## PoC
-<img src="05_Screenshot.png" width="70%" height="70%" />
 
+<img src="05_Screenshot.png" width="70%" height="70%" />
 
 
 ## Mitigation
 
 1 - Implement  strong hashing algorithms for session management
 
-2 - Use server side session management which randomizes a token to validate if user is authorised for admin access
+2 - Use server side session management which randomizes a token to validate if user is authorized for admin access
 
 
 

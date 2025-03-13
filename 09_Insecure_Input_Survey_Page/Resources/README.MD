@@ -1,6 +1,5 @@
 # Insecure Input In Survey Page
 
-
 ## Issue
 
 The 'Grade' option fields at "http://{IP}:{PORT}/index.php?page=survey" is subject to having the values manipulated resulting in loss of data integrity.

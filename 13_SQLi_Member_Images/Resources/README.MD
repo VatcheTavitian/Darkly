@@ -1,6 +1,5 @@
 # SQL Injection In Member Search Field 
 
-
 ## Issue
 
 The input field at "http://{IP}:{PORT}/index.php?page=member" does not sanitize input data which is passed through to a database directly enquiry \
@@ -10,9 +9,10 @@ resulting in injection of query into SQL database.
 ## Attack Vector
 
 1 - Navigating to "http://{IP}:{PORT}/index.php?page=member" and entering arbitrary payload eg `' or 1=1` into input field and selecting submit 
-reveals SQL syntax error message confirming that data is being passed into query unsantized
+reveals SQL syntax error message confirming that data is being passed into query without sanitization
 
-2 - Identify Schemas in database by inputing `4 UNION SELECT null,schema_name from INFORMATION_SCHEMA.SCHEMATA-- -` - we see interesting schema `Member_images` \
+2 - Identify Schemas in database by inputting `4 UNION SELECT null,schema_name from INFORMATION_SCHEMA.SCHEMATA-- -` into the search field and pressing enter \
+We see interesting schema `Member_images` \
 Note - as there are only 2 columns being returned/rendered by the server during a normal query then union select needs to only reference 2 columns during query!
 
 3 - Identify the tables in `Member_images` schema with `4 UNION SELECT TABLE_SCHEMA, TABLE_NAME FROM INFORMATION_SCHEMA.COLUMNS -- -` which reveals table name `list_images`
@@ -32,7 +32,7 @@ Note - as there are only 2 columns being returned/rendered by the server during 
 
 9 - The decrypted hash is found to be `albatroz`
 
-10 - We follow the intructions as per table contents and lowercase `albatroz` then apply a SHA256 algorith to reveal the flag.
+10 - We follow the instructions as per table contents and lowercase `albatroz` then apply a SHA256 algorithm to reveal the flag.
 
 11 - Flag is `f2a29020ef3132e01dd61df97fd33ec8d7fcd1388cc9601e7db691d17d4d6188`
 

@@ -1,9 +1,9 @@
-# Spoofing Referer and User-Agent
+# Spoofing Referrer and User-Agent
 
 
 ## Issue
 
-Manipulating Referer and User-Agent HTTP header at page "http://{IP}:{PORT}/index.php?page=b7e44c7a40c5f80139f0a50f3650fb2bd8d00b0d24667c4c2ca32c88e13b758f" \
+Manipulating Referrer and User-Agent HTTP header at page "http://{IP}:{PORT}/index.php?page=b7e44c7a40c5f80139f0a50f3650fb2bd8d00b0d24667c4c2ca32c88e13b758f" \
  reveals sensitive information in HTML code which leads to this exploit.
 
 
@@ -11,10 +11,10 @@ Manipulating Referer and User-Agent HTTP header at page "http://{IP}:{PORT}/inde
 
 1 - Navigating to "http://{IP}:{PORT}/index.php?page=media&src=nsa" reveals a link to "http://{IP}:{PORT}/index.php?page=b7e44c7a40c5f80139f0a50f3650fb2bd8d00b0d24667c4c2ca32c88e13b758f"
 
-2 - Folowing link to this page we examine the source code and find the following comments in html code: \
+2 - Following link to this page we examine the source code and find the following comments in html code: \
 `<!--You must come from : "https://www.nsa.gov/".-->` and `<!--Let's use this browser : "ft_bornToSec". It will help you a lot.-->`
 
-3 - We set the Referer Header in HTTP Request to "https://www.nsa.gov/"
+3 - We set the Referrer Header in HTTP Request to "https://www.nsa.gov/"
 
 4 - We set the User-Agent Header in HTTP Request to "ft_bornToSec"
 
@@ -25,6 +25,7 @@ Manipulating Referer and User-Agent HTTP header at page "http://{IP}:{PORT}/inde
 6 - Flag is `f2a29020ef3132e01dd61df97fd33ec8d7fcd1388cc9601e7db691d17d4d6188`
 
 _* NOTE: You can use a browser extension such as 'Modify Header Value' on Firefox to change header values *_
+
 
 ## PoC
 

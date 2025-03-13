@@ -1,6 +1,5 @@
 # SQL Injection In Member Search Field
 
-
 ## Issue
 
 The input field at "http://{IP}:{PORT}/index.php?page=member" does not sanitize input data which is passed through to a database directly enquiry \
@@ -10,10 +9,10 @@ resulting in injection of query into SQL database.
 ## Attack Vector
 
 1 - Navigating to "http://{IP}:{PORT}/index.php?page=member" and entering arbitrary payload eg `' or 1=1` into input field and selecting submit 
-reveals SQL syntax error message confirming that data is being passed into query unsantized
+reveals SQL syntax error message confirming that data is being passed into query without sanitization
 
-2 - Identify Schemas in database by inputing `4 UNION SELECT null,schema_name from INFORMATION_SCHEMA.SCHEMATA-- -` - we see interesting schema `Member_Sql_Injection` \
-Note - as there are only 2 columns being reurned/rendered by the server during a normal query then union select needs to only reference 2 columns during query!
+2 - Identify Schemas in database by inputting `4 UNION SELECT null,schema_name from INFORMATION_SCHEMA.SCHEMATA-- -` - we see interesting schema `Member_Sql_Injection` \
+Note - as there are only 2 columns being returned/rendered by the server during a normal query then union select needs to only reference 2 columns during query!
 
 3 - Identify the tables in `Member_Sql_Injection` schema with `4 UNION SELECT TABLE_SCHEMA, TABLE_NAME FROM INFORMATION_SCHEMA.COLUMNS -- -` which reveals table name `users`
 
@@ -28,11 +27,11 @@ Note - as there are only 2 columns being reurned/rendered by the server during a
 |--------------|---------|------------|-----------|------|---------|--------|-----------------------------------------------------------|------------------------------------------|
 | **Data**         | 5       | Flag       | GetThe    | 42   | 42      | 42     | Decrypt this password -> then lower all the char. Sh256 on it and it's good ! | 5ff9d0165b4f92b14994e5c685cdce28        |
 
-8 - Open bash and navigate to script directory. Launch script with `python3 hashcracker.py` to attempt to crack md5 hash against the passwordlist.txt wordlist
+8 - Open bash and navigate to script directory. Launch script with `python3 hashcracker.py` to attempt to crack md5 hash against the passwordlist.txt word list
 
 9 - The decrypted hash is found to be `FortyTwo`
 
-10 - We follow the intructions as per table contents and lowercase `FortyTwo` then apply a SHA256 algorith to reveal the flag.
+10 - We follow the instructions as per table contents and lowercase `FortyTwo` then apply a SHA256 algorithm to reveal the flag.
 
 11 - Flag is `10a16d834f9b1e4068b25c4c46fe0284e99e44dceaf08098fc83925ba6310ff5`
 

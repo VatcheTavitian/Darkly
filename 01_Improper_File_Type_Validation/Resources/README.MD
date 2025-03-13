@@ -16,18 +16,18 @@ An attacker can intercept the request and change the 'Content-Type' field to 'im
 
 4 - Click 'Upload' in browser and view the request in BurpSuite
 
-5 - Ammend the 'Content-Type' field to 'image/jpeg' and send request
+5 - Amend the 'Content-Type' field to 'image/jpeg' and send request
 
 6 - The file upload is accepted and the flag is revealed
 
-*NOTE - As an alternative to BurpSuite in FireFox, you can open Web Developer Tools and go to the 'Network' tab. \
+*NOTE - As an alternative to BurpSuite in Firefox, you can open Web Developer Tools and go to the 'Network' tab. \
 Identify the upload POST request, right click it and select 'Edit and Resend'. \
 In the 'Body' portion of the new request ensure 'Content-Type:' is 'image/jpeg' \
 Click send and the 'Response' tab should reveal that the file upload was successful.*
 
 ## PoC
-<img src="01_Screenshot.png" width="70%" height="70%" />
 
+<img src="01_Screenshot.png" width="70%" height="70%" />
 
 
 ## Mitigation

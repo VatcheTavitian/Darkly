@@ -1,6 +1,5 @@
 # Stored XXS In Feedback Form
 
-
 ## Issue
 
 The feedback form 'Name' field  at "http://{IP}:{PORT}/index.php?page=feedback" does not sanitize input data which is submitted and reflected on the page.
@@ -15,7 +14,7 @@ Furthermore the input data is stored on the server thus XSS is persisted and any
 
 3 - Refresh the page to see if the data is stored and that the XSS is persistent. 
 
-4 - We cannot use payload `<script>alert('XSS')</script>` in name field directly as the number of characters is restricted. The 'Message' field seems to be filtering out html tags so we foxus on name field.
+4 - We cannot use payload `<script>alert('XSS')</script>` in name field directly as the number of characters is restricted. The 'Message' field seems to be filtering out html tags so we focus on the name field.
 
 5 - Open BurpSuite and write another message and click sign guestbook. Intercept the POST request in BurpSuite.
 
