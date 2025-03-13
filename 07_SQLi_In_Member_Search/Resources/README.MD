@@ -12,7 +12,7 @@ resulting in injection of query into SQL database.
 1 - Navigating to "http://{IP}:{PORT}/index.php?page=member" and entering arbitrary payload eg `' or 1=1` into input field and selecting submit 
 reveals SQL syntax error message confirming that data is being passed into query unsantized
 
-2 - Identify Schemas in database by inputing `4 UNION null,schema_name from INFORMATION_SCHEMA.SCHEMATA-- -` - we see interesting schema `Member_Sql_Injection` \
+2 - Identify Schemas in database by inputing `4 UNION SELECT null,schema_name from INFORMATION_SCHEMA.SCHEMATA-- -` - we see interesting schema `Member_Sql_Injection` \
 Note - as there are only 2 columns being reurned/rendered by the server during a normal query then union select needs to only reference 2 columns during query!
 
 3 - Identify the tables in `Member_Sql_Injection` schema with `4 UNION SELECT TABLE_SCHEMA, TABLE_NAME FROM INFORMATION_SCHEMA.COLUMNS -- -` which reveals table name `users`

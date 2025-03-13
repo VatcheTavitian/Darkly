@@ -3,13 +3,13 @@
 
 ## Issue
 
-The URL "http://192.168.43.47:8000/index.php?page=media&src=nsa" embeds content onto the page and passing through different value in 'src' parameter can \
+The URL "http://{IP}:{PORT}/index.php?page=media&src=nsa" embeds content onto the page and passing through different value in 'src' parameter can \
 render malicious content on page.
 
 
 ## Attack Vector
 
-1 - Examining the HTML Code at "http://192.168.43.47:8000/index.php?page=media&src=nsa" and changing the 'src' value reveals the value is reflected in html code. \
+1 - Examining the HTML Code at "http://{IP}:{PORT}/index.php?page=media&src=nsa" and changing the 'src' value reveals the value is reflected in html code. \
 `<object data="thisismyvalueinput"></object>`
 
 2 - We try different payloads to try and break out of the tags but are unsuccessful. We find most payloads are filtered so we try data urls as per `https://developer.mozilla.org/en-US/docs/Web/URI/Reference/Schemes/data` 
@@ -29,6 +29,10 @@ render malicious content on page.
 
 ## Mitigation
 
-1 - Validate and whitelist URLs
+1 - Validate and validate input
 
-2 - Restrict to internal URLs using relative URLs
+2 - Use CSP to prevent unauthorized scripts
+
+3 - Avoid object tag injection
+
+4 - Reject data URLS
