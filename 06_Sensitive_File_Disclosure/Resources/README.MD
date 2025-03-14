@@ -9,7 +9,7 @@ Navigating to  "http://{IP}:{PORT}/robots.txt" reveals sensitive file with crede
 
 1 - Navigate to "http://{IP}:{PORT}/robots.txt". A directory '/whatever' is visible which hosts a file 'htpassword'
 
-2 - Download and open the file "http://{IP}:{PORT}/whatever/htpassword"
+2 - Download and open the file at "http://{IP}:{PORT}/whatever/htpassword"
 
 3 - Examining the content reveals credentials 'root:437394baff5aa33daa618be47b75cb49'. The password appears to be an md5 hash.
 
@@ -23,9 +23,11 @@ Navigating to  "http://{IP}:{PORT}/robots.txt" reveals sensitive file with crede
 
 8- Enumerated directories reveals interesting location at '/admin/'. Navigate to "http://{IP}:{PORT}/admin/"
 
-9- Login with credentials `root:qwerty123@` and retrieve flag
+9- Login with credentials `root:qwerty123@`
 
-*NOTE - You can use existing MD5 decryption tools such as MD5decrypt.net to attempt to crack root password hash. \ 
+10 - Flag revealed is `d19b4823e0d5600ceed56d5e896ef328d7a2b9e7ac7e80f4fcdb9b10bcb3e7ff`
+
+*NOTE - You can use existing MD5 decryption tools such as MD5decrypt.net to attempt to crack root password hash. \
 For directory brute force enumeration, you can use existing tools such as GoBuster and DirBuster*
 
 

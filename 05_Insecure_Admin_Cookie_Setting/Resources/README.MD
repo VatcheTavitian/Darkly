@@ -8,7 +8,7 @@ This hash value can be amended ultimately setting the session user as admin.
 
 ## Attack Vector
 
-1 - Confirm the cookie value by open Web Developer Tools and examining cookies set in storage.
+1 - Confirm the cookie value by opening Web Developer Tools and examining cookies set in storage.
 
 2 - The cookie is set as '68934a3e9455fa72420237eb05902327' which appears to be md5. We suspect it is hash of 'false' so we confirm with following script.
 
@@ -20,7 +20,7 @@ This hash value can be amended ultimately setting the session user as admin.
 
 6 - Back in browser Web Developer Tools set the value of 'I_am_admin' cookie to md5 hash value of 'true' which is 'b326b5062b2f0e69046810717534cb09'
 
-7 - Refresh page and flag is revealed
+7 - Refresh page and the flag revealed is `df2eb4ba34ed059a1e3e89ff4dfc13445f104a1a52295214def1c4fb1693a5c3`
 
 *NOTE - You can use existing MD5 decryption tools such as MD5decrypt.net which will check hashes of words in a word list instead of \
 the md5encodeandcheck.py script which only examines the word 'false'*

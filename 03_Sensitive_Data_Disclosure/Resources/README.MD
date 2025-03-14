@@ -20,7 +20,7 @@ the website.
 
 5 - Click Submit
 
-6 - Flag is revealed
+6 - Flag revealed is `1d4855f7337c0c14b6f44946872c4eb33853f40b2d54393fbe94f49f1e19bbb0`
 
 
 ## PoC

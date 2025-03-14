@@ -18,7 +18,9 @@ An attacker can intercept the request and change the 'Content-Type' field to 'im
 
 5 - Amend the 'Content-Type' field to 'image/jpeg' and send request
 
-6 - The file upload is accepted and the flag is revealed
+6 - The file upload is accepted
+
+7 - Flag revealed is `46910d9ce35b385885a9f7e2b336249d622f29b267a1771fbacf52133beddba8`
 
 *NOTE - As an alternative to BurpSuite in Firefox, you can open Web Developer Tools and go to the 'Network' tab. \
 Identify the upload POST request, right click it and select 'Edit and Resend'. \

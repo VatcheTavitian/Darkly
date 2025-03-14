@@ -3,8 +3,7 @@
 
 ## Issue
 
-Manipulating Referrer and User-Agent HTTP header at page "http://{IP}:{PORT}/index.php?page=b7e44c7a40c5f80139f0a50f3650fb2bd8d00b0d24667c4c2ca32c88e13b758f" \
- reveals sensitive information in HTML code which leads to this exploit.
+Sensitive information in HTML code leads to manipulation of Referrer and User-Agent HTTP headers at page "http://{IP}:{PORT}/index.php?page=b7e44c7a40c5f80139f0a50f3650fb2bd8d00b0d24667c4c2ca32c88e13b758f" 
 
 
 ## Attack Vector
@@ -35,6 +34,6 @@ _* NOTE: You can use a browser extension such as 'Modify Header Value' on Firefo
 
 ## Mitigation
 
-1 - Validate input on server side by restricting input to defined options
+1 - Do not include sensitive information in HTML comments
 
-2 - Check for input tampering e.g if value and selection text don't match
+2 - Implement further authentication mechanisms to validate user

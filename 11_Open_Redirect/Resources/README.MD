@@ -2,13 +2,13 @@
 
 ## Issue
 
-The URL "http://{IP}:{PORT}/index.php?page=redirect&site=" allows for the value in 'site' parameter to be any url \
-This creates the risk of phishing attacks with an attacker being able to redirect a user to a malicious page using a non malicious url for initial engagement.
+The URL "http://{IP}:{PORT}/index.php?page=redirect&site=" allows for the value in 'site' parameter to be any url. \
+This creates the risk of phishing attacks with an attacker being able to redirect a user to a malicious page using a legitimate url for initial engagement.
 
 
 ## Attack Vector
 
-1 - Examining the HTML Code on the main page reveals that redirects are managed through the site parameter query string in redirect page \
+1 - Examining the HTML Code on the main page reveals that redirects are managed through the site parameter query string \
  "http://{IP}:{PORT}/index.php?page=redirect&site="
 
 2 - We modify the 'site' parameter value to test if the redirect is to any page `"http://{IP}:{PORT}/index.php?page=redirect&site=www.google.com"`

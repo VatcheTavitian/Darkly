@@ -2,7 +2,7 @@
 
 ## Issue
 
-The input field at "http://{IP}:{PORT}/index.php?page=member" does not sanitize input data which is passed through to a database directly enquiry \
+The input field at "http://{IP}:{PORT}/index.php?page=member" does not sanitize input data which is passed through to a database directly \
 resulting in injection of query into SQL database.
 
 
